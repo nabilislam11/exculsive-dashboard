@@ -8,6 +8,8 @@ import CreateProduct from './components/dashboard/product/CreateProduct.jsx';
 import CreateCategory from './components/dashboard/category/CreateCategory.jsx';
 import DashboardLayout from './components/dashboard/DashboardLayout.jsx';
 import { DashboardHome } from './components/dashboard/home/dashboardHome.jsx';
+import AllCategory from './components/dashboard/category/allCategory.jsx';
+import UpdateCategory from './components/dashboard/category/UpdateCategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,8 @@ const router = createBrowserRouter([
       { index: true, element: <DashboardHome /> },
       { path: "/createproduct", element: <CreateProduct /> },
       { path: "/createcategory", element: <CreateCategory /> },
+      { path: "/allcategory", element: <AllCategory /> },
+      { path: "/update-category/:id", element: <UpdateCategory /> },
     ],
   },
 ]);

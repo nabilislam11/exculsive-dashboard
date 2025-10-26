@@ -22,7 +22,8 @@ export function VersionSwitcher({
   return (
     <SidebarMenu>
       <SidebarMenuItem>
-        <DropdownMenu>
+        {/* <DropdownMenu>
+
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
               size="lg"
@@ -46,8 +47,9 @@ export function VersionSwitcher({
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
-        </DropdownMenu>
+        </DropdownMenu> */}
+        <h1 className=" mt-5 text-center text-black font-semibold text-xl mb-5  shadow-black shadow-[100px] ">Exclusive Ecommerce</h1>
       </SidebarMenuItem>
     </SidebarMenu>
   );
-}
+} 

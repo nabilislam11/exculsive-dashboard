@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import {
     Field,
     FieldDescription,
@@ -20,25 +22,46 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 
 export default function CreateCategory() {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm()
+    console.log(errors);
+
+    const onSubmit = (data) => {
+
+        console.log(data);
+        try {
+            axios.post("http://localhost:3000/api/v1/category/create-category", data)
+
+        } catch (error) {
+            console.log(error);
+
+
+        }
+    }
     return (
-        <div className="w-full max-w-md">
-            <form>
+        <div className="w-full max-w-md ">
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <FieldGroup>
                     <FieldSet>
                         <FieldLegend>Create Category</FieldLegend>
-                        <FieldDescription>
-                            All Category create by this.
-                        </FieldDescription>
                         <FieldGroup>
                             <Field>
                                 <FieldLabel htmlFor="checkout-7j9-card-name-43j">
                                     Name
                                 </FieldLabel>
                                 <Input
-                                    id="checkout-7j9-card-name-43j"
+                                    id="name"
                                     placeholder="Name of Category "
-                                    required
+                                    {...register("name", { required: "Category name is required" })}
                                 />
+                                {errors.name && (
+                                    <p className=" text-red-500">{errors.name.message}</p>
+                                )}
+
                             </Field>
 
                         </FieldGroup>
@@ -52,10 +75,13 @@ export default function CreateCategory() {
                                     Description
                                 </FieldLabel>
                                 <Textarea
-                                    id="checkout-7j9-optional-comments"
+                                    id="description"
                                     placeholder="Add category description"
-                                    className="resize-none"
+                                    {...register("description", { required: "Category description is required" })}
                                 />
+                                {errors.description && (
+                                    <p className=" text-red-500">{errors.description.message}</p>
+                                )}
                             </Field>
                         </FieldGroup>
                     </FieldSet>
