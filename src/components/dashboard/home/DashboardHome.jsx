@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/empty"
 import { Link } from "react-router"
 
-export function DashboardHome() {
+export default function DashboardHome() {
     return (
         <Empty>
             <EmptyHeader>
