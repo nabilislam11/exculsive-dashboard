@@ -52,6 +52,27 @@ const data = {
 
       ],
     },
+    {
+      title: "Sub Categroy",
+      url: "#",
+      isActive: true,
+      items: [
+        {
+          title: "Create SubCategory ",
+          url: "/create-subcategory",
+        },
+        {
+          title: "All SubCategory ",
+          url: "/get-allsubcategory",
+        },
+        {
+          title: "Update SubCategory ",
+          url: "/update-subcategory/:id",
+        },
+
+
+      ],
+    },
 
   ],
 }

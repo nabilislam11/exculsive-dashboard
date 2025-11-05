@@ -10,6 +10,9 @@ import DashboardLayout from './components/dashboard/DashboardLayout.jsx';
 import DashboardHome from './components/dashboard/home/DashboardHome.jsx';
 import AllCategory from './components/dashboard/category/AllCategory.jsx';
 import UpdateCategory from './components/dashboard/category/UpdateCategory.jsx';
+import CreateSubCategory from './components/dashboard/subcategory/CreateSubCategory.jsx';
+import AllSubCategory from './components/dashboard/subcategory/AllSubCategory.jsx';
+import UpdateSubcategory from './components/dashboard/subcategory/UpdateSubcategory.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +24,9 @@ const router = createBrowserRouter([
       { path: "/createcategory", element: <CreateCategory /> },
       { path: "/allcategory", element: <AllCategory /> },
       { path: "/update-category/:id", element: <UpdateCategory /> },
+      { path: "/create-subcategory", element: <CreateSubCategory /> },
+      { path: "/get-allsubcategory", element: <AllSubCategory /> },
+      { path: "/update-subcategory/:id", element: <UpdateSubcategory /> },
     ],
   },
 ]);
