@@ -13,6 +13,7 @@ import UpdateCategory from './components/dashboard/category/UpdateCategory.jsx';
 import CreateSubCategory from './components/dashboard/subcategory/CreateSubCategory.jsx';
 import AllSubCategory from './components/dashboard/subcategory/AllSubCategory.jsx';
 import UpdateSubcategory from './components/dashboard/subcategory/UpdateSubcategory.jsx';
+import AllProduct from './components/dashboard/product/AllProduct.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <DashboardHome /> },
       { path: "/createproduct", element: <CreateProduct /> },
+      { path: "/get-allproduct", element: < AllProduct /> },
       { path: "/createcategory", element: <CreateCategory /> },
       { path: "/allcategory", element: <AllCategory /> },
       { path: "/update-category/:id", element: <UpdateCategory /> },

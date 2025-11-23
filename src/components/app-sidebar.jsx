@@ -31,7 +31,7 @@ const data = {
         },
         {
           title: "ALl Product",
-          url: "#",
+          url: "/get-allproduct",
         },
       ],
     },
