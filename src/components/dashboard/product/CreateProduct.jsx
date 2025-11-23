@@ -38,7 +38,7 @@ export default function CreateProduct() {
         quantity: "",
         sold: "",
         image: null,
-        reting: "",
+        rating: "",
         category: "",
         subcategory: "",
     })
@@ -183,14 +183,14 @@ export default function CreateProduct() {
                     <FieldSet>
                         <FieldGroup>
                             <Field className="w-[600px]">
-                                <FieldLabel htmlFor="reting">
-                                    Product Reting
+                                <FieldLabel htmlFor="rating">
+                                    Product Rating
                                 </FieldLabel>
                                 <Textarea
-                                    id="reting"
-                                    onChange={(e) => handleChange("reting", e.target.value)}
-                                    value={fromData.reting}
-                                    placeholder="Add Product reting"
+                                    id="rating"
+                                    onChange={(e) => handleChange("rating", e.target.value)}
+                                    value={fromData.rating}
+                                    placeholder="Add Product rating"
                                     className="resize-none  "
                                 />
                             </Field>
